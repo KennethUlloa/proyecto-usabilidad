@@ -3,11 +3,12 @@ async function getImage(src) {
     return await response.text();
 }
 
-document.querySelectorAll('[data-svg]')
-.forEach(item => {
-    if (item.hasAttribute('data-svg')) {
-        let src = item.getAttribute('data-svg');
-        getImage(src).then(text => item.innerHTML = text);
-    }
-    
+window.addEventListener("load", () => {
+    document.querySelectorAll('[data-svg]')
+    .forEach(item => {
+        if (item.hasAttribute('data-svg')) {
+            let src = item.getAttribute('data-svg');
+            getImage(src).then(text => item.innerHTML = text);
+        }
+    })
 })

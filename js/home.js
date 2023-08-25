@@ -1,0 +1,1 @@
+document.querySelector("#portadas").innerHTML = api.getPeliculas().map(peli => Pelicula(peli)).join('');
