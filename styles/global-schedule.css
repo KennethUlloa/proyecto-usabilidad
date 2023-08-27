@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --titulo-2-bold: Inter;
+  
+    /* font sizes */
+    --contenido-size: 14px;
+    --titulo-2-bold-size: 16px;
+    --enfasis-size: 28px;
+    --titulo-1-size: 24px;
+  
+    /* Colors */
+    --black: #000;
+    --fondo: #282b34;
+    --fondo-2: #16181d;
+    --light-contrast: #8f92a3;
+    --white: #fff;
+    --primario: #fbb318;
+    --acento-2: #c63894;
+  
+    /* Gaps */
+    --gap-47xl: 66px;
+    --gap-xs: 12px;
+    --gap-sm: 14px;
+    --gap-6xs: 7px;
+    --gap-5xl: 24px;
+    --gap-base: 16px;
+    --gap-10xs: 3px;
+    --gap-9xs: 4px;
+    --gap-7xs: 6px;
+    --gap-smi: 13px;
+    --gap-8xs: 5px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-45xl: 64px;
+    --padding-23xl: 42px;
+    --padding-13xl: 32px;
+    --padding-base: 16px;
+    --padding-5xl: 24px;
+    --padding-7xs: 6px;
+    --padding-xs: 12px;
+    --padding-3xs: 10px;
+    --padding-19xl: 38px;
+    --padding-mini: 15px;
+    --padding-8xs: 5px;
+  
+    /* border radiuses */
+    --br-base: 16px;
+    --br-7xs: 6px;
+    --br-81xl: 100px;
+    --br-3xs: 10px;
+  }
+  
