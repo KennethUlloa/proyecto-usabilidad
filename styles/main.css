@@ -657,10 +657,20 @@
   border: 2px solid #8F92A3;
   background-color: #282B34;
 }
+.btn-fondo-hover:hover {
+  color: #ffffff;
+  border: 2px solid #8F92A3;
+  background-color: #282B34;
+}
 .btn-primario {
   padding: 14px 18px;
   font-weight: bold;
   border-radius: 16px;
+  color: #000000;
+  background-color: #FBB318;
+  border: 1px solid #FBB318;
+}
+.btn-primario-hover:hover {
   color: #000000;
   background-color: #FBB318;
 }
@@ -668,6 +678,10 @@
   padding: 14px 18px;
   font-weight: bold;
   border-radius: 16px;
+  color: #282B34;
+  background-color: #8F92A3;
+}
+.btn-light-accent-hover:hover {
   color: #282B34;
   background-color: #8F92A3;
 }
