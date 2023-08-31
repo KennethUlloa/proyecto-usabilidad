@@ -13,13 +13,14 @@
     <script src="/js/api.js"></script>
     <script src="/js/templates.js"></script>
     <script src="/js/autotabindex.js"></script>
+    <script src="/js/autoactions.js"></script>
     <script src="/js/loadimages.js"></script>
     <script src="/js/index.js"></script>
 </head>
 
 <body class="bg-fondo-2">
     <div class="bg-gradiente-2 d-flex flex-column">
-        <header tabindex="0"
+        <header tabindex="1"
         class='d-flex flex-md-row flex-column bg-fondo-2 justify-content-md-between align-items-center gap-3 gap-md-0 p-4'>
             <div class='logo d-flex align-items-center' tabindex="1"
             role="img"  aria-label="Logo de Multicines">
@@ -70,89 +71,93 @@
             </div>
         </header>
     <main>
-        <div class="frame-container">
-            <div class="frame-div">
-              <div class="image-4-wrapper">
-                <img id="imagen-portada" class="image-4-icon" alt="" src="./public/image-4@2x.png" />
-              </div>              
-              <div class="tag font-24">
-                <div class="icon-18 fill-blanco" data-svg="/img/Star.svg"></div>
-                <b class="complejo">Estreno</b>
+        <div class="d-flex flex-column flex-md-row gap-4 p-5 justify-content-center">
+            <div class="d-flex gap-2">
+              <div class="bg-primario stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                1
               </div>
-              <button class="btn-primario font-24 no-decor">
-                <a class="txt-negro" href="https://youtu.be/LmC5pxr9JZY?si=agkE9mgm8FX8SI5Y">Ver Trailer</a></button>
+              <h3 class="txt-primario" tabindex="2">Selecciona tu horario</h3>
             </div>
-            <div class="frame-parent1">
-              <div class="flash-parent">
-                <b id="titulo-pelicula" class="complejo">Flash</b>
-                <div id="descripcion" class="los-mundos-chocan">
-                </div>
+            <div class="d-flex gap-2">
+              <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                2
               </div>
-              <div class="dia-parent">
-                <button class="dia">
-                  <div class="complejo">Mar.</div>
-                  <b class="b3">20</b>
+              <h3 class="txt-light-contrast">Selecciona tus asientos</h3>
+            </div>
+            <div class="d-flex gap-2">
+              <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                3
+              </div>
+              <h3 class="txt-light-contrast">Revisa tu carrito</h3>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-lg-row p-5 gap-5">
+            <div class="portada-2 gap-3" id="portada">
+              <img id="imagen-portada" alt="" src="" tabindex="3"/>          
+              <div class="tag font-24 d-none" id="tag">
+                <div class="icon-18 fill-blanco" data-svg="/img/Star.svg"></div>
+                <b id="texto-tag">Estreno</b>
+              </div>
+              <a class="txt-negro" href="https://youtu.be/LmC5pxr9JZY?si=agkE9mgm8FX8SI5Y" tabindex="3">
+                <button class="btn-primario font-24 no-decor" aria-hidden="true" >
+                  Ver Trailer
                 </button>
-                <button class="dia1">
-                  <div class="complejo">Mie.</div>
-                  <b class="b3">21</b>
-                </button>
-                <button class="dia1">
-                  <div class="complejo">Jue.</div>
-                  <b class="b3">22</b>
-                </button>
-                <button class="dia1">
-                  <div class="complejo">Vie.</div>
-                  <b class="b3">23</b>
-                </button>
-                <button class="dia1">
-                  <div class="complejo">Sab.</div>
-                  <b class="b3">24</b>
-                </button>
-                <button class="dia1">
-                  <div class="complejo">Dom.</div>
-                  <b class="b3">25</b>
-                </button>
+              </a>
+            
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex flex-column">
+                <h2 id="titulo-pelicula" class="complejo" tabindex="3">Flash</h2>
+                <p id="descripcion" class="los-mundos-chocan" tabindex="3">
+                </p>
+              </div>
+              <div class="d-flex flex-wrap gap-2 justify-content-lg-center" id="panel-dias" data-parent-tab="4">
+                
               </div>
               <div class="frame-parent2">
                 <div class="frame-parent3">
-                  <div class="d-subtitulada-parent">
+                  <div class="d-subtitulada-parent" tabindex="5">
                     <b class="complejo">2D - Subtitulada</b>
                     <b class="sala-normal">SALA NORMAL</b>
                   </div>
-                  <div class="horario-parent">
-                    <button class="btn-fondo btn-primario-hover">
+                  <div class="d-flex gap-2">
+                    <button class="btn-fondo btn-primario-hover" tabindex="5">
                       <div class="complejo">14:00</div>
                     </button>
-                    <button class="btn-fondo btn-primario-hover">
+                    <button class="btn-fondo btn-primario-hover" tabindex="5">
                       <div class="complejo">16:00</div>
                     </button>
-                    <button class="btn-fondo btn-primario-hover">
+                    <button class="btn-fondo btn-primario-hover" tabindex="5">
                       <div class="complejo">19:30</div>
                     </button>
                   </div>
                 </div>
                 <div class="frame-parent3">
-                  <div class="d-subtitulada-parent">
+                  <div class="d-subtitulada-parent" tabindex="5">
                     <b class="complejo">2D - Doblada</b>
                     <b class="sala-normal">SALA NORMAL</b>
                   </div>
-                  <div class="horario-parent">
-                    <button class="btn-fondo btn-primario-hover">
+                  <div class="d-flex gap-2">
+                    <button class="btn-fondo btn-primario-hover" tabindex="5">
                       <div class="complejo">14:00</div>
                     </button>
-                    <button class="btn-fondo btn-primario-hover">
+                    <button class="btn-fondo btn-primario-hover" tabindex="5">
                       <div class="complejo">16:00</div>
                     </button>
-                    <button class="btn-fondo btn-primario-hover">
+                    <button class="btn-fondo btn-primario-hover" tabindex="5">
                       <div class="complejo">19:30</div>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="boton-parent">
-                <button class="btn-light-accent font-24">Regresar</button>
-                <button class="btn-primario font-24">Siguiente</button>
+              <div class="d-flex gap-3 justify-content-end">
+                <a href="/" tabindex="5">
+                  <button class="btn-light-accent font-24 border-0" aria-hidden="true">Regresar</button>
+                </a>
+                <a href="/seats.html" data-add-id="" tabindex="5">
+                  <button class="btn-primario font-24" aria-hidden="true">Siguiente</button>
+                </a>
+                
               </div>
             </div>
           </div>
@@ -214,15 +219,6 @@
     </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script>
-        let pelicula = getPeliculas().find(item => item.nombre === "Flash");
-        if (pelicula != undefined) {
-        let imagen = document.querySelector("#imagen-portada");
-        imagen.src = pelicula.imagen.url;
-        imagen.alt = pelicula.imagen.alt;
-        document.querySelector("#descripcion").innerHTML = pelicula.sinopsis
-        document.querySelector("#titulo-pelicula").innerHTML = pelicula.nombre
-        }
-    </script>
+    <script src="/js/schedule.js"></script>
 </body>
 </html>

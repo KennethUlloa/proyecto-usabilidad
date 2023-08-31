@@ -11,6 +11,7 @@
     <script src="/js/api.js"></script>
     <script src="/js/templates.js"></script>
     <script src="/js/autotabindex.js"></script>
+    <script src="/js/autoactions.js"></script>
     <script src="/js/loadimages.js"></script>
     <script src="/js/index.js"></script>
 </head>
@@ -67,52 +68,86 @@
             </div>
         </header>
     <main>
-        <div id="carouselExampleIndicators" class="carousel slide" 
-        data-bs-ride="carousel"
-        tabindex="1"
-        aria-label="Carusel de imágenes con promociones y posters de películas"
-        >
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active indicator" aria-current="true" aria-label="Slide 1" tabindex="1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="indicator" tabindex="1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class="indicator" tabindex="1"></button>
+        <div class="d-flex flex-column flex-md-row gap-4 p-5 justify-content-center">
+            <div class="d-flex gap-2">
+              <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                1
+              </div>
+              <h3 class="txt-light-contrast">Selecciona tu horario</h3>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active ratio ratio-21x9 w-100">
-                <img src="/img/bb_banner.jpg" class="d-block" alt="poster con un chico en la parte superior izquierda, un chico con un disfraz negro con elementos de color azúl en el centro y el texto Blue Beetle" tabindex="2">
+            <div class="d-flex gap-2">
+              <div class="bg-primario stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                2
               </div>
-              <div class="carousel-item ratio ratio-21x9 w-100">
-                <img src="/img/gotg-banner.jpg" class="d-block" alt="..." tabindex="2">
-              </div>
-              <div class="carousel-item ratio ratio-21x9 w-100">
-                <img src="/img/shazam_banner.png" class="d-block" alt="..." tabindex="2">
-              </div>
+              <h3 class="txt-primario">Selecciona tus asientos</h3>
             </div>
-            <button class="carousel-control-prev txt-blanco" type="button" tabindex="2" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <div class="bg-fondo-2 p-3 rounded-5">
-                    <i class="fa-solid fa-chevron-left fa-2xl" aria-hidden="true"></i>
-                </div>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" tabindex="2">
-                <div class="bg-fondo-2 p-3 rounded-5">
-                    <i class="fa-solid fa-chevron-right fa-2xl" aria-hidden="true"></i>
-                </div>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-          </div>
-        <div class="p-5 d-flex flex-column align-items-center justify-content-center" tabindex="3">
-            <h2 class="txt-primario">Bienvenido</h2>
-            <h2>¡La magia del cine en tus manos!</h2>
+            <div class="d-flex gap-2">
+              <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                3
+              </div>
+              <h3 class="txt-light-contrast">Revisa tu carrito</h3>
+            </div>
         </div>
-        <div class="d-flex flex-row p-5 align-items-center justify-content-between"
-            
-        >
-            <h3 class="txt-light-contrast" tabindex="4">Descubre lo <strong class="txt-blanco">nuevo</strong></h3>
-            <button class="btn-fondo" tabindex="4">Ver más</button>
-        </div>
-        <div class="auto-grid gap-3 px-5 preview-portadas justify-content-between" id="portadas" tabindex="4" aria-label="Listado de películas" data-parent-tab="4">
-
+        <div class="d-flex px-5 py-3 gap-5 justify-content-center flex-column flex-md-row">
+            <div class="portada-1 estreno d-flex gap-3" id="portada">
+                <img src="" alt="" id="imagen-portada">
+                <div class="tag estreno d-flex align-items-center gap-1" id="tag">
+                    <span data-svg="/img/Star.svg" class="icon-18 fill-blanco d-flex"></span>
+                    <b id="texto-tag" class="m-0 font-20">Estreno</b>
+                </div>
+                <h3 class="txt-blanco titulo-portada" id="titulo-pelicula"></h3>
+            </div>
+            <div class="d-flex flex-column w-fit align-items-center">
+                <div class="d-flex flex-column p-4 rounded-4 bg-fondo-2 w-100">
+                    <h3 class="txt-light-contrast">Normal</h3>
+                    <div class="d-flex flex-column flex-md-row gap-3 p-4 rounded-4 bg-fondo">
+                        <div class="d-flex flex-column w-100">
+                            <h3 class="txt-blanco txt-bold font-18">2D Vermount</h3>
+                            <b class="d-flex align-items-center">$3.00</b>    
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button class="btn-fondo btn-primario-outline-hover rounded-circle" data-value-target="numero-asientos" data-action="minus">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <input type="number" class="bg-negro border-0 text-center rounded-4 h-100" value="1" min="1" style="width: 50px;" id="numero-asientos">
+                            <button class="btn-fondo btn-primario-outline-hover rounded-circle" data-value-target="numero-asientos" data-action="plus">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="py-4">Sala 6</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                    <div class="d-flex gap-2">
+                        <div data-svg="/img/seat.svg" class="seat w-fit"></div>
+                        <p>Disponibles</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div data-svg="/img/seat.svg" class="seat taken w-fit"></div>
+                        <p>Ocupados</p>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div data-svg="/img/seat.svg" class="seat selected w-fit"></div>
+                        <p>Seleccionados</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center flex-column mt-4">
+                    <div class="w-100 px-5 d-flex flex-column align-items-center">
+                        <h3>Pantalla</h3>
+                        <span class="pantalla bg-blanco my-4"></span>
+                    </div>
+                    
+                    <div id="asientos" class="d-flex flex-column w-100 sala"></div>
+                </div>
+                <div class="d-flex w-100 justify-content-end gap-3 mt-3">
+                    <a href="/schedules.html" data-add-id="">
+                        <button class="btn-light-accent font-22 border-0">Regresar</button>
+                    </a>
+                    <a href="/">
+                        <button class="btn-primario font-22">Siguiente</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="flex-md-row w-100 d-flex flex-column justify-content-center gap-4 h-100 p-5">
@@ -171,7 +206,6 @@
     </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-    <script src="/js/home.js"></script>
+    <script src="/js/seats.js"></script>
 </body>
 </html>

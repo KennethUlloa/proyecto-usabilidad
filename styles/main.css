@@ -1,33 +1,106 @@
-.portada {
+.portada-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.portada img {
+.portada-1 img {
   border-radius: 15px;
-  width: 208px;
-  height: 304px;
+  width: 200px;
+  height: 292.3076923077px;
 }
-.portada .tag {
+.portada-1 .tag {
   border-radius: 16px;
   padding: 6px 12px;
   color: #ffffff;
 }
-.portada.estreno img {
+.portada-1.estreno img {
   border: 5px solid #C63894;
 }
-.portada.estreno .tag {
+.portada-1.estreno .tag {
   background: #C63894;
 }
-.portada.pre-estreno img {
+.portada-1.pre-estreno img {
   border: 5px solid #0094C5;
 }
-.portada.pre-estreno .tag {
+.portada-1.pre-estreno .tag {
   background: #0094C5;
 }
+.portada-1 .titulo-portada {
+  max-width: 200px;
+}
 
-.titulo-portada {
-  max-width: 208px;
+.portada-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portada-2 img {
+  border-radius: 15px;
+  width: 300px;
+  height: 438.4615384615px;
+}
+.portada-2 .tag {
+  border-radius: 16px;
+  padding: 6px 12px;
+  color: #ffffff;
+}
+.portada-2.estreno img {
+  border: 5px solid #C63894;
+}
+.portada-2.estreno .tag {
+  background: #C63894;
+}
+.portada-2.pre-estreno img {
+  border: 5px solid #0094C5;
+}
+.portada-2.pre-estreno .tag {
+  background: #0094C5;
+}
+.portada-2 .titulo-portada {
+  max-width: 300px;
+}
+
+.portada-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portada-3 img {
+  border-radius: 15px;
+  width: 400px;
+  height: 584.6153846154px;
+}
+.portada-3 .tag {
+  border-radius: 16px;
+  padding: 6px 12px;
+  color: #ffffff;
+}
+.portada-3.estreno img {
+  border: 5px solid #C63894;
+}
+.portada-3.estreno .tag {
+  background: #C63894;
+}
+.portada-3.pre-estreno img {
+  border: 5px solid #0094C5;
+}
+.portada-3.pre-estreno .tag {
+  background: #0094C5;
+}
+.portada-3 .titulo-portada {
+  max-width: 400px;
+}
+
+.tag {
+  border-radius: 16px;
+  padding: 6px 12px;
+  color: #ffffff;
+}
+.tag.estreno {
+  background: #C63894;
+}
+.tag.pre-estreno {
+  background: #0094C5;
 }
 
 .icon-14 {
@@ -42,6 +115,13 @@
   height: 14px;
 }
 
+.box-14 {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+}
+
 .icon-16 {
   display: flex;
   justify-content: center;
@@ -52,6 +132,13 @@
 .icon-16 svg {
   width: 16px;
   height: 16px;
+}
+
+.box-16 {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
 }
 
 .icon-18 {
@@ -66,6 +153,13 @@
   height: 18px;
 }
 
+.box-18 {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+}
+
 .icon-20 {
   display: flex;
   justify-content: center;
@@ -76,6 +170,13 @@
 .icon-20 svg {
   width: 20px;
   height: 20px;
+}
+
+.box-20 {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .icon-22 {
@@ -90,6 +191,13 @@
   height: 22px;
 }
 
+.box-22 {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
 .icon-24 {
   display: flex;
   justify-content: center;
@@ -100,6 +208,70 @@
 .icon-24 svg {
   width: 24px;
   height: 24px;
+}
+
+.box-24 {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.icon-32 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.icon-32 svg {
+  width: 32px;
+  height: 32px;
+}
+
+.box-32 {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.icon-48 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.icon-48 svg {
+  width: 48px;
+  height: 48px;
+}
+
+.box-48 {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.icon-72 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.icon-72 svg {
+  width: 72px;
+  height: 72px;
+}
+
+.box-72 {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  min-height: 72px;
 }
 
 @media (min-width: 0) {
@@ -194,10 +366,10 @@
 .fill-fondo {
   fill: #282B34;
 }
-.fill-fondo-i {
+.fill-fondo-i, .fill-fondo-h:hover {
   fill: #282B34 !important;
 }
-.fill-fondo-i * {
+.fill-fondo-i *, .fill-fondo-h:hover * {
   fill: #282B34 !important;
 }
 .fill-fondo * {
@@ -207,10 +379,10 @@
 .stroke-fondo {
   stroke: #282B34;
 }
-.stroke-fondo-i {
+.stroke-fondo-i, .stroke-fondo-h:hover {
   stroke: #282B34 !important;
 }
-.stroke-fondo-i * {
+.stroke-fondo-i *, .stroke-fondo-h:hover * {
   stroke: #282B34 !important;
 }
 .stroke-fondo * {
@@ -238,10 +410,10 @@
 .fill-acento-1 {
   fill: #0094C5;
 }
-.fill-acento-1-i {
+.fill-acento-1-i, .fill-acento-1-h:hover {
   fill: #0094C5 !important;
 }
-.fill-acento-1-i * {
+.fill-acento-1-i *, .fill-acento-1-h:hover * {
   fill: #0094C5 !important;
 }
 .fill-acento-1 * {
@@ -251,10 +423,10 @@
 .stroke-acento-1 {
   stroke: #0094C5;
 }
-.stroke-acento-1-i {
+.stroke-acento-1-i, .stroke-acento-1-h:hover {
   stroke: #0094C5 !important;
 }
-.stroke-acento-1-i * {
+.stroke-acento-1-i *, .stroke-acento-1-h:hover * {
   stroke: #0094C5 !important;
 }
 .stroke-acento-1 * {
@@ -282,10 +454,10 @@
 .fill-acento-2 {
   fill: #C63894;
 }
-.fill-acento-2-i {
+.fill-acento-2-i, .fill-acento-2-h:hover {
   fill: #C63894 !important;
 }
-.fill-acento-2-i * {
+.fill-acento-2-i *, .fill-acento-2-h:hover * {
   fill: #C63894 !important;
 }
 .fill-acento-2 * {
@@ -295,10 +467,10 @@
 .stroke-acento-2 {
   stroke: #C63894;
 }
-.stroke-acento-2-i {
+.stroke-acento-2-i, .stroke-acento-2-h:hover {
   stroke: #C63894 !important;
 }
-.stroke-acento-2-i * {
+.stroke-acento-2-i *, .stroke-acento-2-h:hover * {
   stroke: #C63894 !important;
 }
 .stroke-acento-2 * {
@@ -326,10 +498,10 @@
 .fill-primario {
   fill: #FBB318;
 }
-.fill-primario-i {
+.fill-primario-i, .fill-primario-h:hover {
   fill: #FBB318 !important;
 }
-.fill-primario-i * {
+.fill-primario-i *, .fill-primario-h:hover * {
   fill: #FBB318 !important;
 }
 .fill-primario * {
@@ -339,10 +511,10 @@
 .stroke-primario {
   stroke: #FBB318;
 }
-.stroke-primario-i {
+.stroke-primario-i, .stroke-primario-h:hover {
   stroke: #FBB318 !important;
 }
-.stroke-primario-i * {
+.stroke-primario-i *, .stroke-primario-h:hover * {
   stroke: #FBB318 !important;
 }
 .stroke-primario * {
@@ -370,10 +542,10 @@
 .fill-fondo-2 {
   fill: #16181D;
 }
-.fill-fondo-2-i {
+.fill-fondo-2-i, .fill-fondo-2-h:hover {
   fill: #16181D !important;
 }
-.fill-fondo-2-i * {
+.fill-fondo-2-i *, .fill-fondo-2-h:hover * {
   fill: #16181D !important;
 }
 .fill-fondo-2 * {
@@ -383,10 +555,10 @@
 .stroke-fondo-2 {
   stroke: #16181D;
 }
-.stroke-fondo-2-i {
+.stroke-fondo-2-i, .stroke-fondo-2-h:hover {
   stroke: #16181D !important;
 }
-.stroke-fondo-2-i * {
+.stroke-fondo-2-i *, .stroke-fondo-2-h:hover * {
   stroke: #16181D !important;
 }
 .stroke-fondo-2 * {
@@ -414,10 +586,10 @@
 .fill-blanco {
   fill: #ffffff;
 }
-.fill-blanco-i {
+.fill-blanco-i, .fill-blanco-h:hover {
   fill: #ffffff !important;
 }
-.fill-blanco-i * {
+.fill-blanco-i *, .fill-blanco-h:hover * {
   fill: #ffffff !important;
 }
 .fill-blanco * {
@@ -427,10 +599,10 @@
 .stroke-blanco {
   stroke: #ffffff;
 }
-.stroke-blanco-i {
+.stroke-blanco-i, .stroke-blanco-h:hover {
   stroke: #ffffff !important;
 }
-.stroke-blanco-i * {
+.stroke-blanco-i *, .stroke-blanco-h:hover * {
   stroke: #ffffff !important;
 }
 .stroke-blanco * {
@@ -458,10 +630,10 @@
 .fill-negro {
   fill: #000000;
 }
-.fill-negro-i {
+.fill-negro-i, .fill-negro-h:hover {
   fill: #000000 !important;
 }
-.fill-negro-i * {
+.fill-negro-i *, .fill-negro-h:hover * {
   fill: #000000 !important;
 }
 .fill-negro * {
@@ -471,10 +643,10 @@
 .stroke-negro {
   stroke: #000000;
 }
-.stroke-negro-i {
+.stroke-negro-i, .stroke-negro-h:hover {
   stroke: #000000 !important;
 }
-.stroke-negro-i * {
+.stroke-negro-i *, .stroke-negro-h:hover * {
   stroke: #000000 !important;
 }
 .stroke-negro * {
@@ -502,10 +674,10 @@
 .fill-light-contrast {
   fill: #8F92A3;
 }
-.fill-light-contrast-i {
+.fill-light-contrast-i, .fill-light-contrast-h:hover {
   fill: #8F92A3 !important;
 }
-.fill-light-contrast-i * {
+.fill-light-contrast-i *, .fill-light-contrast-h:hover * {
   fill: #8F92A3 !important;
 }
 .fill-light-contrast * {
@@ -515,10 +687,10 @@
 .stroke-light-contrast {
   stroke: #8F92A3;
 }
-.stroke-light-contrast-i {
+.stroke-light-contrast-i, .stroke-light-contrast-h:hover {
   stroke: #8F92A3 !important;
 }
-.stroke-light-contrast-i * {
+.stroke-light-contrast-i *, .stroke-light-contrast-h:hover * {
   stroke: #8F92A3 !important;
 }
 .stroke-light-contrast * {
@@ -527,6 +699,94 @@
 
 .option-light-contrast:not(:checked) {
   color: #8F92A3 !important;
+}
+
+.bg-acento-2-light {
+  background: #F57EB2;
+}
+.bg-acento-2-light-i {
+  background: #F57EB2 !important;
+}
+
+.txt-acento-2-light {
+  color: #F57EB2;
+}
+.txt-acento-2-light-i {
+  color: #F57EB2 !important;
+}
+
+.fill-acento-2-light {
+  fill: #F57EB2;
+}
+.fill-acento-2-light-i, .fill-acento-2-light-h:hover {
+  fill: #F57EB2 !important;
+}
+.fill-acento-2-light-i *, .fill-acento-2-light-h:hover * {
+  fill: #F57EB2 !important;
+}
+.fill-acento-2-light * {
+  fill: #F57EB2;
+}
+
+.stroke-acento-2-light {
+  stroke: #F57EB2;
+}
+.stroke-acento-2-light-i, .stroke-acento-2-light-h:hover {
+  stroke: #F57EB2 !important;
+}
+.stroke-acento-2-light-i *, .stroke-acento-2-light-h:hover * {
+  stroke: #F57EB2 !important;
+}
+.stroke-acento-2-light * {
+  stroke: #F57EB2;
+}
+
+.option-acento-2-light:not(:checked) {
+  color: #F57EB2 !important;
+}
+
+.bg-primario-light {
+  background: #FFDC90;
+}
+.bg-primario-light-i {
+  background: #FFDC90 !important;
+}
+
+.txt-primario-light {
+  color: #FFDC90;
+}
+.txt-primario-light-i {
+  color: #FFDC90 !important;
+}
+
+.fill-primario-light {
+  fill: #FFDC90;
+}
+.fill-primario-light-i, .fill-primario-light-h:hover {
+  fill: #FFDC90 !important;
+}
+.fill-primario-light-i *, .fill-primario-light-h:hover * {
+  fill: #FFDC90 !important;
+}
+.fill-primario-light * {
+  fill: #FFDC90;
+}
+
+.stroke-primario-light {
+  stroke: #FFDC90;
+}
+.stroke-primario-light-i, .stroke-primario-light-h:hover {
+  stroke: #FFDC90 !important;
+}
+.stroke-primario-light-i *, .stroke-primario-light-h:hover * {
+  stroke: #FFDC90 !important;
+}
+.stroke-primario-light * {
+  stroke: #FFDC90;
+}
+
+.option-primario-light:not(:checked) {
+  color: #FFDC90 !important;
 }
 
 .bg-gradiente-1 {
@@ -546,10 +806,10 @@
 .fill-gradiente-1 {
   fill: linear-gradient(to top, #16181D, transparent);
 }
-.fill-gradiente-1-i {
+.fill-gradiente-1-i, .fill-gradiente-1-h:hover {
   fill: linear-gradient(to top, #16181D, transparent) !important;
 }
-.fill-gradiente-1-i * {
+.fill-gradiente-1-i *, .fill-gradiente-1-h:hover * {
   fill: linear-gradient(to top, #16181D, transparent) !important;
 }
 .fill-gradiente-1 * {
@@ -559,10 +819,10 @@
 .stroke-gradiente-1 {
   stroke: linear-gradient(to top, #16181D, transparent);
 }
-.stroke-gradiente-1-i {
+.stroke-gradiente-1-i, .stroke-gradiente-1-h:hover {
   stroke: linear-gradient(to top, #16181D, transparent) !important;
 }
-.stroke-gradiente-1-i * {
+.stroke-gradiente-1-i *, .stroke-gradiente-1-h:hover * {
   stroke: linear-gradient(to top, #16181D, transparent) !important;
 }
 .stroke-gradiente-1 * {
@@ -590,10 +850,10 @@
 .fill-gradiente-2 {
   fill: linear-gradient(to top, #16181D, #000000);
 }
-.fill-gradiente-2-i {
+.fill-gradiente-2-i, .fill-gradiente-2-h:hover {
   fill: linear-gradient(to top, #16181D, #000000) !important;
 }
-.fill-gradiente-2-i * {
+.fill-gradiente-2-i *, .fill-gradiente-2-h:hover * {
   fill: linear-gradient(to top, #16181D, #000000) !important;
 }
 .fill-gradiente-2 * {
@@ -603,10 +863,10 @@
 .stroke-gradiente-2 {
   stroke: linear-gradient(to top, #16181D, #000000);
 }
-.stroke-gradiente-2-i {
+.stroke-gradiente-2-i, .stroke-gradiente-2-h:hover {
   stroke: linear-gradient(to top, #16181D, #000000) !important;
 }
-.stroke-gradiente-2-i * {
+.stroke-gradiente-2-i *, .stroke-gradiente-2-h:hover * {
   stroke: linear-gradient(to top, #16181D, #000000) !important;
 }
 .stroke-gradiente-2 * {
@@ -631,6 +891,18 @@
 
 .font-16 {
   font-size: 16px;
+}
+
+.font-18 {
+  font-size: 18px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-22 {
+  font-size: 22px;
 }
 
 .font-24 {
@@ -674,6 +946,11 @@
   color: #000000;
   background-color: #FBB318;
 }
+.btn-primario-outline, .btn-primario-outline-hover:hover {
+  background-color: #282B34;
+  border: 2px solid #FBB318;
+  color: #FBB318;
+}
 .btn-light-accent {
   padding: 14px 18px;
   font-weight: bold;
@@ -711,6 +988,8 @@
   --blanco: #ffffff;
   --negro: #000000;
   --light-contrast: #8F92A3;
+  --acento-2-light: #F57EB2;
+  --primario-light: #FFDC90;
   --gradiente-1: linear-gradient(to top, #16181D, transparent);
   --gradiente-2: linear-gradient(to top, #16181D, #000000);
 }
@@ -743,6 +1022,20 @@
   height: 20%;
   background: linear-gradient(to top, #000000, transparent);
   z-index: 1;
+}
+
+.seat-hoverable:hover * {
+  fill: #FFDC90;
+  stroke: #FBB318;
+}
+
+.seat.taken *, .seat.taken:hover * {
+  fill: #F57EB2;
+  stroke: #C63894;
+}
+.seat.selected *, .seat.selected:hover * {
+  fill: #FFDC90;
+  stroke: #FBB318;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -19,12 +19,61 @@ body {
   object-fit: cover;
 }
 
-
-#portadas {
-
-  border: 1px solid red;
+.no-decor, .no-decor * {
+  text-decoration: none !important;
 }
 
-.no-decor a {
+a {
   text-decoration: none;
+  color: inherit;
+}
+
+.middle-panel {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.stage {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat::after {
+  content: attr(data-seat);
+  color: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  font-weight: bold;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.pantalla {
+  width: 100%;
+  height: 5px;
+}
+
+#asientos {
+  max-width: 80vw !important;
+  overflow-x: scroll;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
