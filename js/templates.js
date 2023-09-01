@@ -60,7 +60,7 @@ function Asiento(asiento, estado=0) {
 
     let index = Math.max(0,Math.min(estadosAsientos.length - 1, estado));
     return `
-    <button data-svg="img/seat.svg" class="seat seat-hoverable bg-transparent border-0 ${estadosAsientos[estado]} icon-48" data-seat="${asiento}" data-child-tag="" aria-label="asiento ${asiento}"></button>
+    <button data-svg="./img/seat.svg" class="seat seat-hoverable bg-transparent border-0 ${estadosAsientos[estado]} icon-48" data-seat="${asiento}" data-child-tag="" aria-label="asiento ${asiento}"></button>
     `.trim()
 }
 
