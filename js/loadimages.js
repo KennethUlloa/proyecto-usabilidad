@@ -1,6 +1,11 @@
 async function getImage(src) {
-    let response = await fetch(src,{headers:{'Content-Type':'image/svg'}});
-    return await response.text();
+    let response = await fetch(src,{headers:{'Content-Type':'image/svg+xml'}});
+    if (response.ok) {
+        return await response.text();
+    }else {
+        return '';
+    }
+    
 }
 
 window.addEventListener("load", () => {
