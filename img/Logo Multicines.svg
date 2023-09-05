@@ -1,4 +1,6 @@
-<svg width="171" height="40" viewBox="0 0 171 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="171" height="40" viewBox="0 0 171 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+role="img" aria-label="logo de multicines"
+>
 <g clip-path="url(#clip0_1_8)">
 <mask id="mask0_1_8" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="171" height="40">
 <path d="M0 0.248413H171V39.2104H0V0.248413Z" fill="white"/>

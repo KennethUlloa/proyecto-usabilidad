@@ -46,4 +46,10 @@ function registerAutoAction(selector, callable) {
 window.addEventListener('load', () => {
     actions("[data-action][data-value-target]", plusMinusListener);
     actions("[href][data-add-id]", addIdToLink)
+    actions("a[href]",(item) => {item.addEventListener('keypress', (e) => {
+        if(e.keyCode === 13){
+            location.href = item.getAttribute('href');
+        }
+        
+    })})
 })

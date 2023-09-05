@@ -13,7 +13,11 @@ window.addEventListener("load", () => {
     .forEach(item => {
         if (item.hasAttribute('data-svg')) {
             let src = item.getAttribute('data-svg');
-            getImage(src).then(text => item.innerHTML = text);
+            
+            getImage(src).then(text => {
+                item.innerHTML = text 
+                item.querySelector("svg").setAttribute('role','img');
+            });
         }
     })
 })

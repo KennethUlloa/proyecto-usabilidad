@@ -16,102 +16,102 @@
     <script src="js/index.js"></script>
 </head>
 <body class="bg-fondo-2">
+    <h1 class="d-none">Multicines</h1>
     <div class="bg-gradiente-2 d-flex flex-column">
-        <header tabindex="1"
-        class='d-flex flex-md-row flex-column bg-fondo-2 justify-content-md-between align-items-center gap-3 gap-md-0 p-4'>
-            <div class='logo d-flex align-items-center' tabindex="1"
-            role="img"  aria-label="Logo de Multicines">
-                <img src="img/Logo Multicines.svg" class='d-block d-md-none d-lg-block' tabindex="-1" aria-hidden="true"/>    
-                <img src="img/multicines.svg" class='d-none d-md-block d-lg-none' tabindex="-1" aria-hidden="true"/>               
+        <header role="none"
+        class='d-flex flex-md-row flex-column bg-fondo-2 justify-content-md-between align-items-center gap-3 gap-md-0 p-4' data-parent-tab="0">
+            <a href="./" data-child-tab="">
+                <div class='logo d-flex align-items-center' 
+                aria-label="Logo de Multicines">
+                <img src="img/Logo Multicines.svg" class='d-block d-md-none d-lg-block' tabindex="-1" alt="Logo de multicines" role="none"/>    
+                <img src="img/multicines.svg" class='d-none d-md-block d-lg-none' tabindex="-1" alt="Logo de multicines" />
+                    
             </div>
+            </a>
             <div class='sucursal d-flex flex-column justify-content-center gap-2'
             >
-                <div class='d-flex flex-row gap-3'
-                    aria-label="Selecciona en qué complejo deseas realizar tu compra"
-                    tabindex="1"
-                >
-                    <span class='d-flex flex-column justify-content-center'>Complejo</span>
-                    <select name="seleccion-complejo" id="complejo" tabindex="1"
-                    
+                <div class='d-flex flex-row gap-3'>
+                    <label class='d-flex flex-column justify-content-center' for="complejo" aria-label="Selecciona en qué complejo deseas realizar tu compra">Complejo</label>
+                    <select name="seleccion-complejo" id="complejo" data-child-tab=""
+                    autocomplete="off"
                     class='form-select txt-primario-i text-center'>
                     </select>           
                 </div>
                 <select 
                 aria-label="Selecciona el día en que quieres consultar la información"
-                name="" id="diaFuncion" class='form-select txt-primario text-center' tabindex="1"></select>
+                name="" id="diaFuncion" class='form-select txt-primario text-center' data-child-tab="" autocomplete="off"></select>
             </div>
             <div class='d-flex flex-row gap-3'>
-                <button class="btn-main" tabindex="1"
+                <button class="btn-main" data-child-tab=""
                 aria-label="Cartelera"
                 >
                     <div data-svg="img/I_Cinta_Pelicula.svg" class="icon-24 fill-blanco"></div>
-                    <h6>Cartelera</h6>
-                </button>
-                <button class="btn-main" tabindex="1"
+                    Cartelera                </button>
+                <button class="btn-main" data-child-tab=""
                 aria-label="Dulcería"
                 >
                     <div data-svg="img/I_Palomitas.svg" class="icon-24 fill-blanco"></div>
-                    <h6>Dulcería</h6>
+                    Dulcería
                 </button>
-                <button class="btn-main" tabindex="1"
+                <button class="btn-main" data-child-tab=""
                 aria-label="Perfil"
                 >
                     <div data-svg="img/I_Perfil.svg" class="icon-24 fill-blanco"></div>
-                    <h6>Perfil</h6>
+                    Perfil
                 </button>
-                <button class="btn-main" tabindex="1"
+                <button class="btn-main" data-child-tab=""
                 aria-label="Carrito"
                 >
                     <div data-svg="img/I_Carrito.svg" class="icon-24 fill-blanco"></div>
-                    <h6>Carrito</h6>
+                    Carrito
                 </button>
             </div>
         </header>
     <main>
-        <div class="d-flex flex-column flex-md-row gap-4 p-5 justify-content-center">
+        <div class="d-flex flex-column flex-md-row gap-4 p-5 justify-content-center" role="list">
             <div class="d-flex gap-2">
               <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
                 1
               </div>
-              <h3 class="txt-light-contrast">Selecciona tu horario</h3>
+              <h2 class="txt-light-contrast">Selecciona tu horario</h2>
             </div>
             <div class="d-flex gap-2">
               <div class="bg-primario stage txt-fondo-2 rounded-circle font-20 txt-bold">
                 2
               </div>
-              <h3 class="txt-primario">Selecciona tus asientos</h3>
+              <h2 class="txt-primario" tabindex="0" role="listitem">Selecciona tus asientos</h2>
             </div>
             <div class="d-flex gap-2">
               <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
                 3
               </div>
-              <h3 class="txt-light-contrast">Revisa tu carrito</h3>
+              <h2 class="txt-light-contrast">Revisa tu carrito</h2>
             </div>
         </div>
         <div class="d-flex px-5 py-3 gap-5 justify-content-center flex-column flex-md-row">
             <div class="portada-1 estreno d-flex gap-3" id="portada">
-                <img src="" alt="" id="imagen-portada">
+                <img src="" alt="" id="imagen-portada" tabindex="0" role="img">
                 <div class="tag estreno d-flex align-items-center gap-1" id="tag">
                     <span data-svg="img/Star.svg" class="icon-18 fill-blanco d-flex"></span>
                     <b id="texto-tag" class="m-0 font-20">Estreno</b>
                 </div>
-                <h3 class="txt-blanco titulo-portada" id="titulo-pelicula"></h3>
+                <h1 class="txt-blanco titulo-portada" id="titulo-pelicula"></h1>
             </div>
             <div class="d-flex flex-column w-fit align-items-center">
                 <div class="d-flex flex-column p-4 rounded-4 bg-fondo-2 w-100">
-                    <h3 class="txt-light-contrast">Normal</h3>
+                    <h2 class="txt-light-contrast font-22" tabindex="0" role="heading" aria-level="3">Normal</h2>
                     <div class="d-flex flex-column flex-md-row gap-3 p-4 rounded-4 bg-fondo">
                         <div class="d-flex flex-column w-100">
-                            <h3 class="txt-blanco txt-bold font-18">2D Vermount</h3>
-                            <b class="d-flex align-items-center">$3.00</b>    
+                            <h3 class="txt-blanco txt-bold font-18" tabindex="0" role="heading" aria-level="3">2D Vermount</h3>
+                            <b class="d-flex align-items-center" aria-label="precio del boleto" tabindex="0" role="heading" aria-level="4">$3.00</b>    
                         </div>
                         <div class="d-flex align-items-center gap-2">
-                            <button class="btn-fondo btn-primario-outline-hover rounded-circle" data-value-target="numero-asientos" data-action="minus">
-                                <i class="fa-solid fa-minus"></i>
+                            <button class="btn-fondo btn-primario-outline-hover rounded-circle" data-value-target="numero-asientos" data-action="minus" aria-label="disminuir cantidad de asientos" tabindex="0">
+                                <i class="fa-solid fa-minus" aria-label="ícono de resta"></i>
                             </button>
-                            <input type="number" class="bg-negro border-0 text-center rounded-4 h-100" value="1" min="1" style="width: 50px;" id="numero-asientos">
-                            <button class="btn-fondo btn-primario-outline-hover rounded-circle" data-value-target="numero-asientos" data-action="plus">
-                                <i class="fa-solid fa-plus"></i>
+                            <input type="number" class="bg-negro border-0 text-center rounded-4 h-100" value="1" min="1" style="width: 50px;" id="numero-asientos" tabindex="0" name="numero-asientos" aria-label="número de asientos">
+                            <button class="btn-fondo btn-primario-outline-hover rounded-circle" data-value-target="numero-asientos" data-action="plus" aria-label="aumentar cantidad de asientos" tabindex="0">
+                                <i class="fa-solid fa-plus" aria-label="ícono de suma"></i>
                             </button>
                         </div>
                     </div>
@@ -150,57 +150,58 @@
             </div>
         </div>
     </main>
-    <footer class="flex-md-row w-100 d-flex flex-column justify-content-center gap-4 h-100 p-5">
+    <footer class="flex-md-row w-100 d-flex flex-column justify-content-center gap-4 h-100 p-5"
+    data-parent-tab='0'>
         <div class="d-flex flex-column align-items-center">
-            <img src="img/Logo Multicines.svg" alt="Letra M hecha con tres colores junto con la palabra Multicines" alt="Logo de Multicines" tabindex="10">
+            <img src="img/Logo Multicines.svg" alt="Letra M hecha con tres colores junto con la palabra Multicines" data-child-tab='' role="img">
             <div class='d-flex flex-row gap-3 pt-3'>
-                <a href="" aria-label="Enlace a facebook" tabindex="10">
+                <a href="" aria-label="Enlace a facebook" data-child-tab=''>
                     <div data-svg="img/facebook.svg" class="icon-24 fill-blanco"></div>
                 </a>
-                <a href="" aria-label="Enlace a instagram" tabindex="10">
+                <a href="" aria-label="Enlace a instagram" data-child-tab=''>
                     <div data-svg="img/instagram.svg" class="icon-24 fill-blanco"></div>
                 </a>
-                <a href="" aria-label="Enlace a youtube" tabindex="10"> 
+                <a href="" aria-label="Enlace a youtube" data-child-tab=''> 
                     <div data-svg="img/youtube.svg" class="icon-24 fill-blanco"></div>
                 </a>
-                <a href="" aria-label="Enlace a tiktok" tabindex="10">
+                <a href="" aria-label="Enlace a tiktok" data-child-tab=''>
                     <div data-svg="img/tiktok.svg" class="icon-24 fill-blanco"></div>
                 </a>
             </div>
         </div>
 
         <div class='d-flex flex-column align-items-start no-decor'>
-            <a href="" tabindex="10">
-                <h4 class='txt-blanco'>Sobre nosotros</h4>
+            <a href="" data-child-tab=''>
+                <h2 class='txt-blanco'>Sobre nosotros</h2>
             </a>
-            <a href="" tabindex="10">
-                <h5 class='txt-light-contrast'>Trabaja con nosotros</h5>
+            <a href="" data-child-tab=''>
+                <h3 class='txt-light-contrast'>Trabaja con nosotros</h3>
             </a>
-            <a href="" tabindex="10">
-                <h5 class='txt-light-contrast'>Contáctanos</h5>
+            <a href="" data-child-tab='' >
+                <h3 class='txt-light-contrast'>Contáctanos</h3>
             </a>
-            <a href="" tabindex="10">
-                <h5 class='txt-light-contrast'>Preguntas frecuentes</h5>
+            <a href="" data-child-tab='' >
+                <h3 class='txt-light-contrast'>Preguntas frecuentes</h3>
             </a>
-            <a href="" tabindex="10">
-                <h5 class='txt-light-contrast'>Facturación</h5>
+            <a href="" data-child-tab=''>
+                <h3 class='txt-light-contrast'>Facturación</h3>
             </a>
-            <a href="" tabindex="10">
-                <h5 class='txt-light-contrast'>Política de Ley Orgánica de Protección de datos personales</h5>
+            <a href="" data-child-tab=''>
+                <h3 class='txt-light-contrast'>Política de Ley Orgánica de Protección de datos personales</h3>
             </a>
         </div>
         <div class="d-flex flex-column align-items-start no-decor"> 
-            <a href="" tabindex="10">
-                <h4 class="txt-blanco">Legales</h4>
+            <a href="" data-child-tab=''>
+                <h2 class="txt-blanco">Legales</h2>
             </a>
-            <a href="" tabindex="10">
-                <h5 class="txt-light-contrast">Primera emisión de obligaciones Multicines S.A.</h5>
+            <a href="" data-child-tab=''>
+                <h3 class="txt-light-contrast">Primera emisión de obligaciones Multicines S.A.</h3>
             </a>
-            <a href="" tabindex="10">
-                <h5 class="txt-light-contrast">Segunda emisión de obligaciones Multicines S.A.</h5>
+            <a href="" data-child-tab=''>
+                <h3 class="txt-light-contrast" >Segunda emisión de obligaciones Multicines S.A.</h3>
             </a>
-            <a href="" tabindex="10">
-                <h5 class="txt-light-contrast">Prórroga primera emisión de obligaciones Multicines S.A</h5>
+            <a href="" data-child-tab=''>
+                <h3 class="txt-light-contrast">Prórroga primera emisión de obligaciones Multicines S.A</h3>
             </a>
         </div>
     </footer>

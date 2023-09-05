@@ -6,7 +6,10 @@ if (pelicula != undefined) {
     imagen.src = pelicula.imagen.url;
     imagen.alt = pelicula.imagen.alt;
     document.querySelector("#descripcion").innerHTML = pelicula.sinopsis
-    document.querySelector("#titulo-pelicula").innerHTML = pelicula.nombre
+    let titulo = document.querySelector("#titulo-pelicula")
+    titulo.innerHTML = pelicula.nombre
+    titulo.ariaLabel = pelicula.nombre
+
     let tag = document.querySelector("#tag")
     let portada = document.querySelector("#portada")
     let textoTag = document.querySelector("#texto-tag")

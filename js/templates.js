@@ -36,12 +36,12 @@ function Pelicula(pelicula) {
     let portada = Portada(pelicula);
 
     return `
-        <a href="schedules.html?id=${pelicula.id}" class="no-decor">
-        <div class="d-flex flex-column align-items-center portada-wrap mx-auto " data-child-tab=''
-         aria-label='película ${pelicula.nombre}, ${getTextoTipo(pelicula.tipo)} con portada: ${pelicula.imagen.alt}'
-        >
-            ${portada}
-        </div>
+        <a href="schedules.html?id=${pelicula.id}" class="no-decor" data-child-tab=''>
+            <div class="d-flex flex-column align-items-center portada-wrap mx-auto " 
+            aria-label='película ${pelicula.nombre}, ${getTextoTipo(pelicula.tipo)} con portada: ${pelicula.imagen.alt}'
+            role='gridcell'>
+                ${portada}
+            </div>
         </a>
     `.trim() 
 }

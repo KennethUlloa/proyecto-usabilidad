@@ -20,10 +20,10 @@
   background: #C63894;
 }
 .portada-1.pre-estreno img {
-  border: 5px solid #0094C5;
+  border: 5px solid #b91d34;
 }
 .portada-1.pre-estreno .tag {
-  background: #0094C5;
+  background: #b91d34;
 }
 .portada-1 .titulo-portada {
   max-width: 200px;
@@ -51,10 +51,10 @@
   background: #C63894;
 }
 .portada-2.pre-estreno img {
-  border: 5px solid #0094C5;
+  border: 5px solid #b91d34;
 }
 .portada-2.pre-estreno .tag {
-  background: #0094C5;
+  background: #b91d34;
 }
 .portada-2 .titulo-portada {
   max-width: 300px;
@@ -82,10 +82,10 @@
   background: #C63894;
 }
 .portada-3.pre-estreno img {
-  border: 5px solid #0094C5;
+  border: 5px solid #b91d34;
 }
 .portada-3.pre-estreno .tag {
-  background: #0094C5;
+  background: #b91d34;
 }
 .portada-3 .titulo-portada {
   max-width: 400px;
@@ -100,7 +100,7 @@
   background: #C63894;
 }
 .tag.pre-estreno {
-  background: #0094C5;
+  background: #b91d34;
 }
 
 .icon-14 {
