@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles": "sass ./src/scss/main.scss ./dist/styles/main.css"
+    "styles": "sass ./src/scss/main.scss ./dist/styles/main.css --style=compressed",
+    "build": "npm run styles",
+    "deploy": "gh-pages -d ./dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "sass": "^1.66.1"
   }
 }
