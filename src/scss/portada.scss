@@ -1,0 +1,107 @@
+@use 'colors.scss' as color;
+@use 'sass:math';
+@use 'breakpoints.scss' as br;
+
+$portada-width: 208px;
+$portada-height: 304px;
+
+$portada-aspect-ratio: math.div(208,304);
+
+$color-estreno: color.$acento-2;
+$color-pre-estreno: #b91d34;  
+
+$portada-sizes: (
+    1:200, 
+    2:300, 
+    3:400);
+
+$icon-sizes: 14,16,18,20,22,24, 32, 48, 72;
+@mixin portada($pref, $w) {
+    .portada-#{$pref} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            border-radius: 15px;
+            width: #{$w}px;
+            height: #{math.div($w,$portada-aspect-ratio)}px;
+        }
+    
+        .tag {
+            border-radius: 16px;
+            padding: 6px 12px;
+            color: color.$blanco;
+        }
+    
+        &.estreno {
+            img {
+                border: 5px solid $color-estreno;
+            }
+    
+            .tag {
+                background: $color-estreno;
+            }
+        }
+    
+        &.pre-estreno {
+            img {
+                border: 5px solid $color-pre-estreno;
+            }
+    
+            .tag {
+                background: $color-pre-estreno;
+            }
+        }
+    
+        .titulo-portada {
+            max-width: #{$w}px;
+        }
+    }
+}
+
+@each $pref, $w in $portada-sizes {
+    @include portada($pref, $w);
+}
+
+
+.tag {
+    border-radius: 16px;
+    padding: 6px 12px;
+    color: color.$blanco;
+    &.estreno {
+        background: $color-estreno;
+    }
+
+    &.pre-estreno {
+        background: $color-pre-estreno;
+    }
+}
+
+
+
+@mixin icons($val){
+    .icon-#{$val} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+    
+        svg {
+            width: #{$val}px;
+            height: #{$val}px;
+        }
+    }
+
+    .box-#{$val} {
+        width: #{$val}px;
+        height: #{$val}px;
+        min-width: #{$val}px;
+        min-height: #{$val}px;
+    }
+}
+
+
+@each $c in $icon-sizes {
+    @include icons($c);
+}

@@ -1,0 +1,27 @@
+$fondo: #282B34;
+$acento-1: #0094C5;
+$acento-2: #C63894;
+$primario: #FBB318;
+$fondo-2: #16181D;
+$blanco: #ffffff;
+$light-contrast: #8F92A3;
+$gradiente-1: linear-gradient(to top, #16181D, transparent);
+$gradiente-2: linear-gradient(to top , #16181D, #000000);
+$negro: #000000;
+$acento-2-light: #F57EB2;
+$primario-light: #FFDC90;
+
+$color-list: (
+    fondo: $fondo,
+    acento-1: $acento-1,
+    acento-2: $acento-2,
+    primario: $primario,
+    fondo-2: $fondo-2,
+    blanco: $blanco,
+    negro: $negro,
+    light-contrast: $light-contrast,
+    acento-2-light: $acento-2-light,
+    primario-light: $primario-light,
+    gradiente-1: linear-gradient(to top, $fondo-2, transparent),
+    gradiente-2: linear-gradient(to top , $fondo-2, $negro)
+)

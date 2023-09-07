@@ -1,0 +1,193 @@
+@use 'colors';
+@use 'portada.scss' as portada;
+
+$font-sizes: 12, 14, 16, 18, 20, 22, 24, 28;
+
+@each $name, $val in colors.$color-list {
+    .bg-#{$name} {
+        background: $val;
+        &-i {
+            background: $val !important;
+        }
+    }
+
+    .txt-#{$name} {
+        color: $val;
+        &-i {
+            color: $val !important;
+        }
+    }
+
+    .fill-#{$name} {
+        fill: $val;
+        &-i, &-h:hover {
+            fill: $val !important;
+            * {
+                fill: $val !important;
+            }
+        }
+        * {
+            fill: $val;
+        }
+    }
+
+    .stroke-#{$name} {
+        stroke: $val;
+        &-i, &-h:hover {
+            stroke: $val !important;
+            * {
+                stroke: $val !important;
+            }
+        }
+        
+        * {
+            stroke: $val;
+        }
+    }
+
+    
+    .option-#{$name}:not(:checked) {
+        color: $val !important;
+    }
+}
+
+.w-fit {width: fit-content;}
+
+@each $v in $font-sizes {
+    .font-#{$v} {
+        font-size: #{$v}px;
+    }
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.txt-bold {font-weight: bold;}
+
+@mixin button-props() {
+    padding: 14px 18px;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+.btn {
+    
+    &-fondo {
+        @include button-props;
+        color: colors.$blanco;
+        border: 2px solid colors.$light-contrast;
+        background-color: colors.$fondo;
+
+        &-hover:hover {
+            color: colors.$blanco;
+            border: 2px solid colors.$light-contrast;
+            background-color: colors.$fondo;
+        }
+    }
+
+    &-primario {
+        @include button-props;
+        color: colors.$negro;
+        background-color: colors.$primario;
+        border: 1px solid colors.$primario;
+
+        &-hover:hover {
+            color: colors.$negro;
+            background-color: colors.$primario;
+        }
+
+        &-outline, &-outline-hover:hover {
+            background-color: colors.$fondo;
+            border: 2px solid colors.$primario;
+            color: colors.$primario;
+        }
+    }
+
+    &-light-accent {
+        @include button-props;
+        color: colors.$fondo;
+        background-color: colors.$light-contrast;
+
+        &-hover:hover {
+            color: colors.$fondo;
+            background-color: colors.$light-contrast;
+        }
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: colors.$blanco;
+        background: colors.$fondo;
+        border-radius: 16px;
+        padding: 10px;
+        border:none;
+    }
+}
+
+.bg-full {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+:root {
+    @each $name, $value in colors.$color-list {
+        --#{$name}: #{$value};
+    }
+}
+
+.indicator {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50%;
+    background-color: colors.$light-contrast !important;
+}
+
+.carousel .carousel-indicators .active {
+    
+    background-color: colors.$primario !important;
+}
+
+.hoverable {
+    opacity: 0.5;
+}
+
+.hoverable:hover {
+    opacity: 1;
+}
+
+.carousel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    background: linear-gradient(to top, colors.$negro, transparent);
+    z-index: 1;
+}
+
+.seat-hoverable:hover * {
+    fill: colors.$primario-light;
+    stroke: colors.$primario;
+}
+
+.seat {
+    &.taken {
+        *, &:hover * {
+            fill: colors.$acento-2-light;
+            stroke: colors.$acento-2;
+        }
+    }
+
+    &.selected {
+        *, &:hover * {
+            fill: colors.$primario-light;
+            stroke: colors.$primario;
+        }
+    }
+    
+}
