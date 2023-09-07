@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicines</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f9e2e8e2a6.js" crossorigin="anonymous"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/templates.js"></script>
+    <script src="/js/autotabindex.js"></script>
+    <script src="/js/loadimages.js"></script>
+    <script src="/js/index.js"></script>
+</head>
+<body class="bg-fondo-2">
+    <div class="bg-gradiente-2 d-flex flex-column">
+        <header tabindex="0"
+        class='d-flex flex-md-row flex-column bg-fondo-2 justify-content-md-between align-items-center gap-3 gap-md-0 p-4'>
+            <div class='logo d-flex align-items-center' tabindex="1"
+            role="img"  aria-label="Logo de Multicines">
+                <img src="/img/Logo Multicines.svg" class='d-block d-md-none d-lg-block' tabindex="-1" aria-hidden="true"/>    
+                <img src="/img/multicines.svg" class='d-none d-md-block d-lg-none' tabindex="-1" aria-hidden="true"/>               
+            </div>
+            <div class='sucursal d-flex flex-column justify-content-center gap-2'
+            >
+                <div class='d-flex flex-row gap-3'
+                    aria-label="Selecciona en qué complejo deseas realizar tu compra"
+                    tabindex="1"
+                >
+                    <span class='d-flex flex-column justify-content-center'>Complejo</span>
+                    <select name="seleccion-complejo" id="complejo" tabindex="1"
+                    
+                    class='form-select txt-primario-i text-center'>
+                    </select>           
+                </div>
+                <select 
+                aria-label="Selecciona el día en que quieres consultar la información"
+                name="" id="diaFuncion" class='form-select txt-primario text-center' tabindex="1"></select>
+            </div>
+            <div class='d-flex flex-row gap-3'>
+                <button class="btn-main" tabindex="1"
+                aria-label="Cartelera"
+                >
+                    <div data-svg="/img/I_Cinta_Pelicula.svg" class="icon-24 fill-blanco"></div>
+                    <h6>Cartelera</h6>
+                </button>
+                <button class="btn-main" tabindex="1"
+                aria-label="Dulcería"
+                >
+                    <div data-svg="/img/I_Palomitas.svg" class="icon-24 fill-blanco"></div>
+                    <h6>Dulcería</h6>
+                </button>
+                <button class="btn-main" tabindex="1"
+                aria-label="Perfil"
+                >
+                    <div data-svg="/img/I_Perfil.svg" class="icon-24 fill-blanco"></div>
+                    <h6>Perfil</h6>
+                </button>
+                <button class="btn-main" tabindex="1"
+                aria-label="Carrito"
+                >
+                    <div data-svg="/img/I_Carrito.svg" class="icon-24 fill-blanco"></div>
+                    <h6>Carrito</h6>
+                </button>
+            </div>
+        </header>
+    <main>
+        
+    </main>
+    <footer class="flex-md-row w-100 d-flex flex-column justify-content-center gap-4 h-100 p-5">
+        <div class="d-flex flex-column align-items-center">
+            <img src="/img/Logo Multicines.svg" alt="Letra M hecha con tres colores junto con la palabra Multicines" alt="Logo de Multicines" tabindex="10">
+            <div class='d-flex flex-row gap-3 pt-3'>
+                <a href="" aria-label="Enlace a facebook" tabindex="10">
+                    <div data-svg="/img/facebook.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a instagram" tabindex="10">
+                    <div data-svg="/img/instagram.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a youtube" tabindex="10"> 
+                    <div data-svg="/img/youtube.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a tiktok" tabindex="10">
+                    <div data-svg="/img/tiktok.svg" class="icon-24 fill-blanco"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class='d-flex flex-column align-items-start no-decor'>
+            <a href="" tabindex="10">
+                <h4 class='txt-blanco'>Sobre nosotros</h4>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class='txt-light-contrast'>Trabaja con nosotros</h5>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class='txt-light-contrast'>Contáctanos</h5>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class='txt-light-contrast'>Preguntas frecuentes</h5>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class='txt-light-contrast'>Facturación</h5>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class='txt-light-contrast'>Política de Ley Orgánica de Protección de datos personales</h5>
+            </a>
+        </div>
+        <div class="d-flex flex-column align-items-start no-decor"> 
+            <a href="" tabindex="10">
+                <h4 class="txt-blanco">Legales</h4>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class="txt-light-contrast">Primera emisión de obligaciones Multicines S.A.</h5>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class="txt-light-contrast">Segunda emisión de obligaciones Multicines S.A.</h5>
+            </a>
+            <a href="" tabindex="10">
+                <h5 class="txt-light-contrast">Prórroga primera emisión de obligaciones Multicines S.A</h5>
+            </a>
+        </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

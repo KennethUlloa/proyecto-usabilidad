@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicines</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f9e2e8e2a6.js" crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/autotabindex.js"></script>
+    <script src="js/loadimages.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body class="bg-fondo-2">
+    <div class="bg-gradiente-2 d-flex flex-column">
+        <header role="none"
+        class='d-flex flex-md-row flex-column bg-fondo-2 justify-content-md-between align-items-center gap-3 gap-md-0 p-4' data-parent-tab="0">
+            <a href="./" data-child-tab="">
+                <div class='logo d-flex align-items-center' 
+              aria-label="Logo de Multicines">
+                <img src="img/Logo Multicines.svg" class='d-block d-md-none d-lg-block' tabindex="-1" alt="Logo de multicines" role="none"/>    
+                <img src="img/multicines.svg" class='d-none d-md-block d-lg-none' tabindex="-1" alt="Logo de multicines" />
+                     
+            </div>
+            </a>
+            <div class='sucursal d-flex flex-column justify-content-center gap-2'
+            >
+                <div class='d-flex flex-row gap-3'>
+                    <label class='d-flex flex-column justify-content-center' for="complejo" aria-label="Selecciona en qué complejo deseas realizar tu compra">Complejo</label>
+                    <select name="seleccion-complejo" id="complejo" data-child-tab=""
+                    autocomplete="off"
+                    class='form-select txt-primario-i text-center'>
+                    </select>           
+                </div>
+                <select 
+                aria-label="Selecciona el día en que quieres consultar la información"
+                name="" id="diaFuncion" class='form-select txt-primario text-center' data-child-tab="" autocomplete="off"></select>
+            </div>
+            <div class='d-flex flex-row gap-3'>
+                <button class="btn-main" data-child-tab=""
+                aria-label="Cartelera"
+                >
+                    <div data-svg="img/I_Cinta_Pelicula.svg" class="icon-24 fill-blanco"></div>
+                    Cartelera                </button>
+                <button class="btn-main" data-child-tab=""
+                aria-label="Dulcería"
+                >
+                    <div data-svg="img/I_Palomitas.svg" class="icon-24 fill-blanco"></div>
+                    Dulcería
+                </button>
+                <button class="btn-main" data-child-tab=""
+                aria-label="Perfil"
+                >
+                    <div data-svg="img/I_Perfil.svg" class="icon-24 fill-blanco"></div>
+                    Perfil
+                </button>
+                <button class="btn-main" data-child-tab=""
+                aria-label="Carrito"
+                >
+                    <div data-svg="img/I_Carrito.svg" class="icon-24 fill-blanco"></div>
+                    Carrito
+                </button>
+            </div>
+        </header>
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" 
+        
+        data-bs-interval="false"
+        aria-label="Carusel de imágenes con promociones y posters de películas"
+        data-parent-tab="0"
+        >
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active indicator" aria-current="true" aria-label="Banner de la película Blue Beetle con el protagonista en el centro" data-child-tab=""></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Banner película Shazam con el protagonista en el centro" class="indicator" data-child-tab=""></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Banner de la película Guardianes de la Galaxia Vol. 3" class="indicator" data-child-tab=""></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active ratio ratio-21x9 w-100">
+                <img src="img/bb_banner.jpg" class="d-block" alt="poster con un chico en la parte superior izquierda, un chico con un disfraz negro con elementos de color azúl en el centro y el texto Blue Beetle" data-child-tab="" role="banner">
+              </div>
+              <div class="carousel-item ratio ratio-21x9 w-100">
+                <img src="img/gotg-banner.jpg" class="d-block" alt="..." role="banner" data-child-tab="">
+              </div>
+              <div class="carousel-item ratio ratio-21x9 w-100">
+                <img src="img/shazam_banner.png" class="d-block" alt="..." data-child-tab="" role="banner">
+              </div>
+            </div>
+            <button class="carousel-control-prev txt-blanco" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" data-child-tab=""
+            aria-labelledby="anteriorbtn"
+            >
+                <div class="bg-fondo-2 p-3 rounded-5">
+                    <i class="fa-solid fa-chevron-left fa-2xl" role="img" aria-labelledby="anteriorbtn"></i>
+                </div>
+              <span class="visually-hidden" id="anteriorbtn">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" data-child-tab="" aria-labelledby="siguientebtn">
+                <div class="bg-fondo-2 p-3 rounded-5">
+                    <i class="fa-solid fa-chevron-right fa-2xl" role="img" aria-labelledby="siguientebtn"></i>
+                </div>
+              <span class="visually-hidden" id="siguientebtn">Siguiente</span>
+            </button>
+          </div>
+        <div class="p-5 d-flex flex-column align-items-center justify-content-center">
+            <h1 class="txt-primario">Bienvenido a Multicines</h1>
+            <h2>¡La magia del cine en tus manos!</h2>
+        </div>
+        <div class="d-flex flex-row p-5 align-items-center justify-content-between"
+            
+        >
+            <h3 class="txt-light-contrast">Descubre lo <strong class="txt-blanco">nuevo</strong></h3>
+            <button class="btn-fondo" data-child-tab="" aria-details="Botón para ir a la cartelera completa">Ver más</button>
+        </div>
+        <div class="auto-grid gap-3 px-5 preview-portadas justify-content-between" id="portadas" aria-label="Listado de películas" data-parent-tab="0" data-child-tab="" 
+        role="grid"
+        >
+
+        </div>
+    </main>
+    <footer class="flex-md-row w-100 d-flex flex-column justify-content-center gap-4 h-100 p-5"
+    data-parent-tab='0'>
+        <div class="d-flex flex-column align-items-center">
+            <img src="img/Logo Multicines.svg" alt="Letra M hecha con tres colores junto con la palabra Multicines" data-child-tab='' role="img">
+            <div class='d-flex flex-row gap-3 pt-3'>
+                <a href="" aria-label="Enlace a facebook" data-child-tab=''>
+                    <div data-svg="img/facebook.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a instagram" data-child-tab=''>
+                    <div data-svg="img/instagram.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a youtube" data-child-tab=''> 
+                    <div data-svg="img/youtube.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a tiktok" data-child-tab=''>
+                    <div data-svg="img/tiktok.svg" class="icon-24 fill-blanco"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class='d-flex flex-column align-items-start no-decor'>
+            <a href="" data-child-tab=''>
+                <h4 class='txt-blanco'>Sobre nosotros</h4>
+            </a>
+            <a href="" data-child-tab=''>
+                <h5 class='txt-light-contrast'>Trabaja con nosotros</h5>
+            </a>
+            <a href="" data-child-tab='' >
+                <h5 class='txt-light-contrast'>Contáctanos</h5>
+            </a>
+            <a href="" data-child-tab='' >
+                <h5 class='txt-light-contrast'>Preguntas frecuentes</h5>
+            </a>
+            <a href="" data-child-tab=''>
+                <h5 class='txt-light-contrast'>Facturación</h5>
+            </a>
+            <a href="" data-child-tab=''>
+                <h5 class='txt-light-contrast'>Política de Ley Orgánica de Protección de datos personales</h5>
+            </a>
+        </div>
+        <div class="d-flex flex-column align-items-start no-decor"> 
+            <a href="" data-child-tab=''>
+                <h4 class="txt-blanco">Legales</h4>
+            </a>
+            <a href="" data-child-tab=''>
+                <h5 class="txt-light-contrast">Primera emisión de obligaciones Multicines S.A.</h5>
+            </a>
+            <a href="" data-child-tab=''>
+                <h5 class="txt-light-contrast" >Segunda emisión de obligaciones Multicines S.A.</h5>
+            </a>
+            <a href="" data-child-tab=''>
+                <h5 class="txt-light-contrast">Prórroga primera emisión de obligaciones Multicines S.A</h5>
+            </a>
+        </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="js/home.js"></script>
+</body>
+</html>

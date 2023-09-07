@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicines</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/global-schedule.css" />
+    <link rel="stylesheet" href="styles/schedule.css" />
+    <script src="https://kit.fontawesome.com/f9e2e8e2a6.js" crossorigin="anonymous"></script>
+    <script src="js/api.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/autotabindex.js"></script>
+    <script src="js/autoactions.js"></script>
+    <script src="js/loadimages.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body class="bg-fondo-2">
+    <div class="bg-gradiente-2 d-flex flex-column">
+      <header role="none"
+      class='d-flex flex-md-row flex-column bg-fondo-2 justify-content-md-between align-items-center gap-3 gap-md-0 p-4' data-parent-tab="0">
+          <a href="./" data-child-tab="">
+              <div class='logo d-flex align-items-center' 
+            aria-label="Logo de Multicines">
+              <img src="img/Logo Multicines.svg" class='d-block d-md-none d-lg-block' tabindex="-1" alt="Logo de multicines" role="none"/>    
+              <img src="img/multicines.svg" class='d-none d-md-block d-lg-none' tabindex="-1" alt="Logo de multicines" />
+                   
+          </div>
+          </a>
+          <div class='sucursal d-flex flex-column justify-content-center gap-2'
+          >
+              <div class='d-flex flex-row gap-3'>
+                  <label class='d-flex flex-column justify-content-center' for="complejo" aria-label="Selecciona en qué complejo deseas realizar tu compra">Complejo</label>
+                  <select name="seleccion-complejo" id="complejo" data-child-tab=""
+                  autocomplete="off"
+                  class='form-select txt-primario-i text-center'>
+                  </select>           
+              </div>
+              <select 
+              aria-label="Selecciona el día en que quieres consultar la información"
+              name="" id="diaFuncion" class='form-select txt-primario text-center' data-child-tab="" autocomplete="off"></select>
+          </div>
+          <div class='d-flex flex-row gap-3'>
+              <button class="btn-main" data-child-tab=""
+              aria-label="Cartelera"
+              >
+                  <div data-svg="img/I_Cinta_Pelicula.svg" class="icon-24 fill-blanco"></div>
+                  Cartelera                </button>
+              <button class="btn-main" data-child-tab=""
+              aria-label="Dulcería"
+              >
+                  <div data-svg="img/I_Palomitas.svg" class="icon-24 fill-blanco"></div>
+                  Dulcería
+              </button>
+              <button class="btn-main" data-child-tab=""
+              aria-label="Perfil"
+              >
+                  <div data-svg="img/I_Perfil.svg" class="icon-24 fill-blanco"></div>
+                  Perfil
+              </button>
+              <button class="btn-main" data-child-tab=""
+              aria-label="Carrito"
+              >
+                  <div data-svg="img/I_Carrito.svg" class="icon-24 fill-blanco"></div>
+                  Carrito
+              </button>
+          </div>
+      </header>
+    <main>
+        <div class="d-flex flex-column flex-md-row gap-4 p-5 justify-content-center" data-parent-tab="0"
+        role="list">
+            <div class="d-flex gap-2" >
+              <div class="bg-primario stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                1
+              </div>
+              <h3 class="txt-primario" data-child-tab="" role="listitem">Selecciona tu horario</h3>
+            </div>
+            <div class="d-flex gap-2">
+              <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                2
+              </div>
+              <h3 class="txt-light-contrast">Selecciona tus asientos</h3>
+            </div>
+            <div class="d-flex gap-2">
+              <div class="bg-light-contrast stage txt-fondo-2 rounded-circle font-20 txt-bold">
+                3
+              </div>
+              <h3 class="txt-light-contrast">Revisa tu carrito</h3>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-lg-row p-5 gap-5" data-parent-tab="0">
+            <div class="portada-2 gap-3" id="portada">
+              <img id="imagen-portada" alt="" src=""/>          
+              <div class="tag font-24 d-none" id="tag">
+                <div class="icon-18 fill-blanco" data-svg="img/Star.svg"></div>
+                <b id="texto-tag" >Estreno</b>
+              </div>
+              <a class="txt-negro" href="https://youtu.be/LmC5pxr9JZY?si=agkE9mgm8FX8SI5Y" data-child-tab="">
+                <button class="btn-primario font-24 no-decor" tabindex="-1">
+                  Ver Trailer
+                </button>
+              </a>
+            
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex flex-column">
+                <h1 id="titulo-pelicula" class="complejo" role="term" data-child-tab="">Flash</h1>
+                <p id="descripcion" class="d-flex text-start" role="definition" data-child-tab="">
+                </p>
+              </div>
+              <div class="d-flex flex-wrap gap-2 justify-content-lg-center" id="panel-dias" data-parent-tab="0">
+                
+              </div>
+              <div class="frame-parent2">
+                <div class="frame-parent3">
+                  <div class="d-subtitulada-parent" data-child-tab="" role="presentation">
+                    <b class="complejo">2D - Subtitulada</b>
+                    <b class="sala-normal">SALA NORMAL</b>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn-fondo btn-primario-hover" data-child-tab="">
+                      <div class="complejo">14:00</div>
+                    </button>
+                    <button class="btn-fondo btn-primario-hover" data-child-tab="">
+                      <div class="complejo">16:00</div>
+                    </button>
+                    <button class="btn-fondo btn-primario-hover" data-child-tab="">
+                      <div class="complejo">19:30</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="frame-parent3">
+                  <div class="d-subtitulada-parent" data-child-tab="">
+                    <b class="complejo">2D - Doblada</b>
+                    <b class="sala-normal">SALA NORMAL</b>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn-fondo btn-primario-hover" data-child-tab="">
+                      <div class="complejo">14:00</div>
+                    </button>
+                    <button class="btn-fondo btn-primario-hover" data-child-tab="">
+                      <div class="complejo">16:00</div>
+                    </button>
+                    <button class="btn-fondo btn-primario-hover" data-child-tab="">
+                      <div class="complejo">19:30</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex gap-3 justify-content-end">
+                <a href="./" data-child-tab="">
+                  <button class="btn-light-accent font-24 border-0" tabindex="-1">Regresar</button>
+                </a>
+                <a href="seats.html" data-add-id="" data-child-tab="">
+                  <button class="btn-primario font-24" tabindex="-1">Siguiente</button>
+                </a>
+                
+              </div>
+            </div>
+          </div>
+        
+    </main>
+    <footer class="flex-md-row w-100 d-flex flex-column justify-content-center gap-4 h-100 p-5"
+    data-parent-tab='0'>
+        <div class="d-flex flex-column align-items-center">
+            <img src="img/Logo Multicines.svg" alt="Letra M hecha con tres colores junto con la palabra Multicines" data-child-tab='' role="img">
+            <div class='d-flex flex-row gap-3 pt-3'>
+                <a href="" aria-label="Enlace a facebook" data-child-tab=''>
+                    <div data-svg="img/facebook.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a instagram" data-child-tab=''>
+                    <div data-svg="img/instagram.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a youtube" data-child-tab=''> 
+                    <div data-svg="img/youtube.svg" class="icon-24 fill-blanco"></div>
+                </a>
+                <a href="" aria-label="Enlace a tiktok" data-child-tab=''>
+                    <div data-svg="img/tiktok.svg" class="icon-24 fill-blanco"></div>
+                </a>
+            </div>
+        </div>
+
+        <div class='d-flex flex-column align-items-start no-decor'>
+            <a href="" data-child-tab=''>
+                <h2 class='txt-blanco'>Sobre nosotros</h2>
+            </a>
+            <a href="" data-child-tab=''>
+                <h3 class='txt-light-contrast'>Trabaja con nosotros</h3>
+            </a>
+            <a href="" data-child-tab='' >
+                <h3 class='txt-light-contrast'>Contáctanos</h3>
+            </a>
+            <a href="" data-child-tab='' >
+                <h3 class='txt-light-contrast'>Preguntas frecuentes</h3>
+            </a>
+            <a href="" data-child-tab=''>
+                <h3 class='txt-light-contrast'>Facturación</h3>
+            </a>
+            <a href="" data-child-tab=''>
+                <h3 class='txt-light-contrast'>Política de Ley Orgánica de Protección de datos personales</h3>
+            </a>
+        </div>
+        <div class="d-flex flex-column align-items-start no-decor"> 
+            <a href="" data-child-tab=''>
+                <h2 class="txt-blanco">Legales</h2>
+            </a>
+            <a href="" data-child-tab=''>
+                <h3 class="txt-light-contrast">Primera emisión de obligaciones Multicines S.A.</h3>
+            </a>
+            <a href="" data-child-tab=''>
+                <h3 class="txt-light-contrast" >Segunda emisión de obligaciones Multicines S.A.</h3>
+            </a>
+            <a href="" data-child-tab=''>
+                <h3 class="txt-light-contrast">Prórroga primera emisión de obligaciones Multicines S.A</h3>
+            </a>
+        </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="js/schedule.js"></script>
+</body>
+</html>
